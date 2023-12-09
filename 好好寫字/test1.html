@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Hiragana Tracing</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #canvas {
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <button id="clearBtn">Clear Canvas</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const canvas = document.getElementById("canvas");
+            const ctx = canvas.getContext("2d");
+
+            const image = new Image();
+            image.src = "A.svg.png";
+
+            let isDrawing = false;
+
+            image.onload = function() {
+                ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+            };
+
+            function startDrawing(e) {
+                isDrawing = true;
+                draw(e);
+            }
+
+            function stopDrawing() {
+                isDrawing = false;
+                checkPath();
+                ctx.beginPath();
+            }
+
+            function draw(e) {
+                if (!isDrawing) return;
+
+                ctx.lineWidth = 5;
+                ctx.lineCap = "round";
+                ctx.strokeStyle = "#000";
+
+                ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+            }
+
+            function checkPath() {
+                // Get the pixel data of the canvas
+                const tracedPath = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+
+                // Check against some condition (you may need to customize this based on your image)
+                if (!checkCondition(tracedPath)) {
+                    alert("Incorrect! Please try again.");
+                    clearCanvas();
+                } else {
+                    alert("Correct! You've traced the black line.");
+                    clearCanvas();
+                }
+            }
+
+            function checkCondition(path) {
+                // Implement your condition to check if the traced path matches the black line
+                // This can vary based on the characteristics of your image
+                // For simplicity, let's check if the first pixel is black (non-white)
+                return path[0] < 255;
+            }
+
+            function clearCanvas() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+            }
+
+            canvas.addEventListener("mousedown", startDrawing);
+            canvas.addEventListener("mouseup", stopDrawing);
+            canvas.addEventListener("mousemove", draw);
+            canvas.addEventListener("mouseout", stopDrawing);
+
+            document.getElementById("clearBtn").addEventListener("click", clearCanvas);
+        });
+    </script>
+</body>
+</html>

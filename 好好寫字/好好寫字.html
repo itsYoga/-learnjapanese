@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japanese Writing Practice</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #drawingArea {
+      border: 1px solid #000;
+    }
+
+    #submitButton {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="drawingArea" width="300" height="300"></canvas>
+  <button id="settingButton">Setting</button>
+  <button id="submitButton" disabled>Submit</button>
+
+  <script>
+    const drawingArea = document.getElementById('drawingArea');
+    const settingButton = document.getElementById('settingButton');
+    const submitButton = document.getElementById('submitButton');
+    const ctx = drawingArea.getContext('2d');
+    const correctPath = [ { x: 50, y: 50 }, { x: 150, y: 150 }, { x: 250, y: 50 } ];
+    let currentPath = [];
+    let drawing = false;
+    let settingMode = false;
+
+    function drawPath() {
+      ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
+      ctx.beginPath();
+      ctx.moveTo(correctPath[0].x, correctPath[0].y);
+      ctx.lineTo(correctPath[1].x, correctPath[1].y);
+      ctx.lineTo(correctPath[2].x, correctPath[2].y);
+      ctx.stroke();
+    }
+
+    function startDrawing(e) {
+      if (settingMode) return;
+      drawing = true;
+      currentPath = [];
+      ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
+      ctx.beginPath();
+      ctx.moveTo(e.clientX - drawingArea.offsetLeft, e.clientY - drawingArea.offsetTop);
+    }
+
+    function draw(e) {
+      if (!drawing || settingMode) return;
+      ctx.lineTo(e.clientX - drawingArea.offsetLeft, e.clientY - drawingArea.offsetTop);
+      ctx.stroke();
+      currentPath.push({ x: e.clientX - drawingArea.offsetLeft, y: e.clientY - drawingArea.offsetTop });
+    }
+
+    function endDrawing() {
+      if (settingMode) return;
+      drawing = false;
+
+      if (!submitButton.disabled) {
+        checkPath();
+      }
+    }
+
+    function checkPath() {
+      if (currentPath.length !== correctPath.length) {
+        alert('Incorrect! Please try again.');
+        drawPath();
+        return;
+      }
+
+      for (let i = 0; i < currentPath.length; i++) {
+        if (currentPath[i].x !== correctPath[i].x || currentPath[i].y !== correctPath[i].y) {
+          alert('Incorrect! Please try again.');
+          drawPath();
+          return;
+        }
+      }
+
+      alert('Correct! You can move to the next character.');
+      drawPath();
+    }
+
+    function toggleSettingMode() {
+      settingMode = !settingMode;
+      if (settingMode) {
+        submitButton.disabled = false;
+        drawPath();
+      } else {
+        submitButton.disabled = true;
+        ctx.clearRect(0, 0, drawingArea.width, drawingArea.height);
+      }
+    }
+
+    settingButton.addEventListener('click', toggleSettingMode);
+    submitButton.addEventListener('click', checkPath);
+    drawingArea.addEventListener('mousedown', startDrawing);
+    drawingArea.addEventListener('mousemove', draw);
+    drawingArea.addEventListener('mouseup', endDrawing);
+    drawingArea.addEventListener('mouseout', endDrawing);
+  </script>
+</body>
+</html>
