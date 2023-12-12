@@ -84,13 +84,45 @@
                     "class": "output"
                 }));
             });
-            $("#clear").click(function(){
-                // Clear the canvas by filling it with white color
-    ctx.fillStyle = "white";
-    ctx.fillRect(0, 0, $canvas.width(), $canvas.height());
+           
+
+    $("#clear").click(function () {
+        // 删除原有的canvas元素
+        $canvas.remove();
+
+        // 创建新的canvas元素并添加到DOM
+        var newCanvas = $('<canvas id="cSketchPad" width="500" height="500" style="border: 2px solid gray; " />');
+        $("#dCanvas").append(newCanvas);
+
+        // 获取新canvas的context
+        $canvas = $("#cSketchPad");
+        ctx = $canvas[0].getContext("2d");
+        ctx.lineCap = "round";
+        ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
+        ctx.fillRect(0, 0, $canvas.width(), $canvas.height());
+
+        // 重新绑定画图事件
+        $canvas.mousedown(function (e) {
+                ctx.beginPath();
+                ctx.strokeStyle = p_color;
+                ctx.lineWidth = p_width;
+                ctx.moveTo(e.pageX - $canvas.position().left, e.pageY - $canvas.position().top);
+                drawMode = true;
             })
-        });
-    </script>
+            .mousemove(function (e) {
+                if (drawMode) {
+                    ctx.lineTo(e.pageX - $canvas.position().left, e.pageY - $canvas.position().top);
+                    ctx.stroke();
+                }
+            })
+            .mouseup(function (e) {
+                drawMode = false;
+            });
+    });
+
+});
+
+</script>
 </head>
 <body>
 <div id="dPallete"></div>
