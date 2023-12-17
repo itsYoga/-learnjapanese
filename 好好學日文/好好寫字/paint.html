@@ -2,11 +2,23 @@
  
 <html>
 <head>
-    <title>HTML5 Canvas塗鴉板</title>
+    <title>塗鴉區</title>
+    
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.4.js">
     </script>
     <style>
+        :root {
+            --grey-color: rgb(228, 228, 228);
+            --darker-grey-color: rgb(189, 189, 189);
+            --text-color: rgb(60, 60, 60);
+            --border-radius: 15px;
+        }
+        
         body,input { font-size: 9pt; }
+        .container{
+            display: flex;
+            flex-wrap: nowrap;
+        }
         #dCanvas,#dLine { clear: both; }
         .option
         {
@@ -17,8 +29,111 @@
         .lw { text-align: center; vertical-align: middle; }
         img.output { border: 1px solid green; }
         #cSketchPad { cursor: arrow; }
+        .video{
+            position: absolute;
+            top: 12em;
+            left: 45%;
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 2em 5em;
+        }
+
+        .skip_button,
+        .check_button{
+            
+            font-size: 1em;
+            font-weight: 600;
+            padding: 0.8em 2.5em;
+            border-radius: var(--border-radius);
+            transition: 0s all ease-in-out;
+            cursor: pointer;
+        }
+        .clearbutton{
+            width: 50px;
+            font-size: 1.8em;
+            text-indent: -12px;
+            font-weight: 600;
+            padding: 0.8em 1.5em;
+            border-radius: var(--border-radius);
+            transition: 0s all ease-in-out;
+            cursor: pointer;
+            margin-bottom: 1em;
+        }
+        .button {
+            position: absolute;
+            left: 19em;
+            width: 50px;
+            text-indent: 3px;
+            font-size: 1.8em;
+            font-weight: 600;
+            padding: 0.6em 1.3em;
+            border-radius: var(--border-radius);
+            transition: 0s all ease-in-out;
+            cursor: pointer;
+            margin-bottom: 1em;
+        }
+
+        .skip_button ,.clearbutton{
+            color: white;
+            border: 1px solid var(--grey-color);
+            background-color: rgb(157, 156, 156);
+            box-shadow: 0px 3px 0px 0px var(--grey-color);
+        }
+
+        .skip_button:hover ,.clearbutton:hover{
+            background-color: rgba(143, 157, 173, 0.2);
+        }
+
+        .check_button,.button {
+            color: white;
+            border: 1px solid #2ec748;
+            background-color: #2ec748;
+            box-shadow: 0px 3px 0px 0px #27aa3d;
+        }
+
+        .check_button:hover,.button:hover {
+            background-color: #33db4f;
+        }
+
+        .skip_button:active,
+        .check_button:active,
+        .button:active ,.clearbutton:active{
+            transform: translateY(2px);
+            box-shadow: none;
+        }
     </style>
     <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const key = urlParams.get('key'); 
+        if (key) {
+    
+    // 获取JSON数据
+    fetch('vocabulary.json')
+        .then(response => response.json())
+        .then(data => {
+            // 获取键名对应的图像链接
+            const imageUrl = data[key] ? data[key].img : '';
+            const videoFrame = data[key] ? data[key].video : '';
+            // 将图像链接设置到图像元素的src属性上
+            document.getElementById('backImage').src = imageUrl;
+            if (videoFrame) {
+                //console.log(videoFrame);
+                const videoContainer = document.getElementById('video');
+                videoContainer.innerHTML = '<h1>筆畫影片</h1>';
+                videoContainer.innerHTML+=videoFrame;
+            }
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
+    } else {
+    console.error('Key parameter is missing.');
+    }
         $(function () {
             //產生不同顏色的div方格當作調色盤選項
             var colors =
@@ -79,7 +194,7 @@
             });
             //利用.toDataqURL()將繪圖結果轉成圖檔
             $("#bGenImage").click(function () {
-                $("#dOutput").html(
+                $("#dOutput").html("<h1>你寫的字</h1>").append(
                 $("<img />", { src: $canvas[0].toDataURL(),
                     "class": "output"
                 }));
@@ -119,20 +234,35 @@
                 drawMode = false;
             });
     });
+    $(".skip_button").click(function () {
+    window.location.href = "write menu.html"; 
+    });
 
 });
 
 </script>
 </head>
 <body>
+<div class="container">
+<div>
 <div id="dPallete"></div>
 <div id="dLine"></div>
 <div id="dCanvas" >
-<img src="https://item-shopping.c.yimg.jp/i/j/mojipara_9250-cs-3l" width="500" height="500" style="position: absolute; z-index: -1;">
+<img src="" id="backImage" width="500" height="500" style="position: absolute; z-index: -1;">
 <canvas id="cSketchPad" width="500" height="500" style="border: 2px solid gray; " />
 </div>
-<input type="button" id="bGenImage" value="Generate Image" />
-<input type="button" id="clear" value="Clear" />
+<div id="bGenImage" class="button">生成</div>
+<div id="clear" class="clearbutton">CLEAR</div>
+</div>
+<div class="video" id="video">  
+<div><h1>筆畫影片</h1><iframe width="560" height="315" src="https://www.youtube.com/embed/wD3FJgij79c?start=0&amp;end=12" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+</div>
+
+</div>
 <div id="dOutput"></div>
+<footer>
+    <div class="skip_button">MENU</div>
+    <div class="check_button">單字</div>
+</footer>
 </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Image from JSON</title>
+</head>
+<body>
+
+<!-- 显示图像的元素 -->
+<img id="imageElement" src="" alt="Image">
+
+<script>
+// 获取URL中的键名参数
+const urlParams = new URLSearchParams(window.location.search);
+const key = urlParams.get('key'); // 获取键名参数，例如 "う"
+
+// 如果有键名参数，则加载相应的图像
+if (key) {
+    console.log(key);
+    // 获取JSON数据
+    fetch('vocabulary.json')
+        .then(response => response.json())
+        .then(data => {
+            // 获取键名对应的图像链接
+            const imageUrl = data[key] ? data[key].img : '';
+
+            // 将图像链接设置到图像元素的src属性上
+            document.getElementById('imageElement').src = imageUrl;
+            console.log(imageUrl);
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
+} else {
+    console.error('Key parameter is missing.');
+}
+</script>
+
+</body>
+</html>

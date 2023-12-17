@@ -164,7 +164,9 @@ const wrapperElement = document.querySelector('.wrapper');
         const checkButtonElement = document.createElement('div');
   checkButtonElement.className = 'button';
   checkButtonElement.textContent = character;
-
+  checkButtonElement.addEventListener('click', () => {
+            window.location.href = `paint.html?key=${character}`;
+        });
   wrapperElement.appendChild(checkButtonElement);
     }
   
