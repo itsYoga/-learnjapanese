@@ -13,7 +13,9 @@
             --text-color: rgb(60, 60, 60);
             --border-radius: 15px;
         }
-        
+        body{
+          overflow: hidden;
+        }
         body,input { font-size: 9pt; }
         .container{
             position: absolute;
@@ -56,6 +58,28 @@
         .top {
           display: inline-block; 
           vertical-align: top; 
+        }
+        #back{
+            position: absolute;
+            left: 0;
+            top:50%;
+            width: 80px;
+            height: 80px;
+            transform: scaleX(-1);
+        }
+        #next{
+            position: absolute;
+            right: 0;
+            top:50%;
+            width: 80px;
+            height: 80px;
+        }
+        #next:active{
+            transform: translateY(2px);
+        }
+        #back:active{
+            transform: translateY(2px) scaleX(-1);
+            
         }
         #soundv,#sounds{
           width: 30px;
@@ -142,20 +166,32 @@
         }
     </style>
     <script>
+      const gojuonHiragana = [
+        "あ", "い", "う", "え", "お",
+        "か", "き", "く", "け", "こ",
+        "さ", "し", "す", "せ", "そ",
+        "た", "ち", "つ", "て", "と",
+        "な", "に", "ぬ", "ね", "の",
+        "は", "ひ", "ふ", "へ", "ほ",
+        "ま", "み", "む", "め", "も",
+        "や", "ゆ", "よ", 
+        "ら", "り", "る", "れ", "ろ",
+        "わ", "を", "ん"
+        ];
         const urlParams = new URLSearchParams(window.location.search);
         const key = urlParams.get('key'); 
         if (key) {
     
-    // 获取JSON数据
+    
     fetch('vocabulary.json')
         .then(response => response.json())
         .then(data => {
             document.getElementById('name').textContent = key+'ー';
-            // 获取键名对应的图像链接
+           
             const imageUrl = data[key] ? data[key].img : '';
                 const vocabularyWord = data[key] ? data[key].vocabulary : '';
                 const vocabularysentence = data[key] ? data[key].sentence : '';
-                // 将图像链接设置到图像元素的src属性上
+                
                 document.getElementById('backImage').src = imageUrl;
 
                 const imgVoc = document.getElementById('soundv');
@@ -183,6 +219,18 @@
     });
     $(".check_button").click(function () {
     window.location.href = "paint.html?key="+key; 
+    });
+    $("#next").click(function () {
+    const keyIndex = gojuonHiragana.indexOf(key);
+    const nextIndex = (keyIndex + 1) % gojuonHiragana.length;
+    const nextKey = gojuonHiragana[nextIndex];
+    window.location.href = "voc.html?key=" + nextKey;
+    });
+    $("#back").click(function () {
+        const keyIndex = gojuonHiragana.indexOf(key);
+        const prevIndex = (keyIndex - 1 + gojuonHiragana.length) % gojuonHiragana.length;
+        const prevKey = gojuonHiragana[prevIndex];
+        window.location.href = "voc.html?key=" + prevKey;
     });
 
 });
@@ -221,6 +269,8 @@
     </div>
     
 </div>
+<img id="next" src="https://cdn-icons-png.flaticon.com/512/189/189253.png">
+<img id="back" src="https://cdn-icons-png.flaticon.com/512/189/189253.png">
 <footer>
     <div class="skip_button">MENU</div>
     <div class="check_button">寫字</div>
