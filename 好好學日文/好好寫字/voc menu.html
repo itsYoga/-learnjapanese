@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary exercise menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --grey-color: rgb(228, 228, 228);
+            --darker-grey-color: rgb(189, 189, 189);
+            --text-color: rgb(60, 60, 60);
+            --border-radius: 15px;
+        }
+
+        body {
+            background-image: url('https://storage.pixteller.com/designs/designs-images/2019-03-27/05/simple-background-backgrounds-passion-simple-1-5c9b95bd34713.png');
+            background-size: 100%;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            user-select: none;
+            font-family: "Fredoka";
+            color: var(--text-color);
+            background-color: rgb(250, 250, 250);
+        }
+
+        .wrapper {
+            width: 90%;
+            height: 75%;
+            top: 5em;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: scroll;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 5ex;
+            overflow-x: auto;
+        }
+
+        h1 {
+            width: 100%;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        
+
+        
+
+        
+
+        span {
+            display: inline-block;
+            border-bottom: 2px dashed var(--darker-grey-color);
+            margin-right: 5px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            
+            width: 100%;
+            
+            align-items: center;
+            
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            border-top: 2px solid var(--grey-color);
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 2em 5em;
+        }
+
+        .skip_button,
+        .check_button{
+            font-size: 1em;
+            font-weight: 600;
+            padding: 0.8em 2.5em;
+            border-radius: var(--border-radius);
+            transition: 0s all ease-in-out;
+            cursor: pointer;
+        }
+        .button {
+            font-size: 3em;
+            font-weight: 600;
+            padding: 0.8em 1.5em;
+            border-radius: var(--border-radius);
+            transition: 0s all ease-in-out;
+            cursor: pointer;
+            margin-bottom: 1em;
+        }
+
+        .skip_button {
+            color: var(--darker-grey-color);
+            border: 1px solid var(--grey-color);
+            background-color: white;
+            box-shadow: 0px 3px 0px 0px var(--grey-color);
+        }
+
+        .skip_button:hover {
+            background-color: rgba(143, 157, 173, 0.2);
+        }
+
+        .check_button{
+            color: white;
+            border: 1px solid #2ec748;
+            background-color: #2ec748;
+            box-shadow: 0px 3px 0px 0px #27aa3d;
+        }
+        .button {
+            color: white;
+            border: 1px solid #2e99c7;
+            background-color: #2e99c7;
+            box-shadow: 0px 3px 0px 0px #2792aa;
+        }
+
+        .check_button:hover{background-color: #33db4f;}
+        .button:hover {
+            background-color: #33cadb;
+        }
+
+        .skip_button:active,
+        .check_button:active,
+        .button:active {
+            transform: translateY(2px);
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header><h1>好好學單字</h1></header>
+    <div class="wrapper"></div>
+    <footer>
+        <div class="skip_button">回首頁</div>
+        <div class="check_button">寫字</div>
+    </footer>
+
+    <script>
+        const gojuonHiragana = [
+  "あ", "い", "う", "え", "お",
+  "か", "き", "く", "け", "こ",
+  "さ", "し", "す", "せ", "そ",
+  "た", "ち", "つ", "て", "と",
+  "な", "に", "ぬ", "ね", "の",
+  "は", "ひ", "ふ", "へ", "ほ",
+  "ま", "み", "む", "め", "も",
+  "や", "ゆ", "よ", "/", "/",
+  "ら", "り", "る", "れ", "ろ",
+  "わ", "を", "ん"
+];
+// 获取包含平假名的父元素
+const wrapperElement = document.querySelector('.wrapper');
+
+// 遍历 gojuonHiragana 数组，为每个元素创建一个 <div class="check_button">
+    gojuonHiragana.forEach((character, index) => {
+    if (character != "/"){
+        const checkButtonElement = document.createElement('div');
+  checkButtonElement.className = 'button';
+  checkButtonElement.textContent = character;
+  checkButtonElement.addEventListener('click', () => {
+            window.location.href = `voc.html?key=${character}`;
+        });
+  wrapperElement.appendChild(checkButtonElement);
+    }
+  
+
+  // 在每5个元素后添加一个空的div，创建新的行
+  if ((index + 1) % 5 === 0 ) {
+    
+    const lineBreakElement = document.createElement('div');
+    lineBreakElement.style.width = '100%';
+    wrapperElement.appendChild(lineBreakElement);
+  }
+});
+
+        document.querySelector(".check_button").addEventListener("click", () => {
+            window.location.href = `write menu.html`;
+        });
+
+       
+    </script>
+</body>
+
+</html>

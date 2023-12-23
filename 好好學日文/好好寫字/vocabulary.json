@@ -1,277 +1,369 @@
 {
   "あ": {
-    "vocabulary": "愛情",
-    "sentence": "彼女はあなたに深い愛情を抱いています。",
+    "vocabulary": "ありがとう",
+    "sentence": "ありがとうを使うと、相手に感謝の気持ちを伝えることができます。",
+    "voctrans": "謝謝",
+    "sentrans": "透過使用“謝謝”，您可以表達對他人的感激之情。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9250-cs-3l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=0&amp;end=12\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "い": {
-    "vocabulary": "夢想",
-    "sentence": "彼はいつも大きな夢想を抱いています。将来、宇宙探査に参加することが彼の夢想です。",
+    "vocabulary": "いぬ",
+    "sentence": "いぬは公園で遊んでいます。",
+    "voctrans": "狗狗",
+    "sentrans": "那隻狗正在公園裡玩耍。",
     "img": "https://item-shopping.c.yimg.jp/i/n/mojipara_9252-cs-3l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=15&amp;end=21\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "う": {
-    "vocabulary": "雨",
-    "sentence": "今日はうるさくて冷たい雨が降っています。",
+    "vocabulary": "うさぎ",
+    "sentence": "うさぎは公園でかわいく飛び跳ねています。",
+    "voctrans": "兔子",
+    "sentrans": "兔子在公園里可愛地蹦蹦跳跳。",
     "img": "https://item-shopping.c.yimg.jp/i/n/mojipara_9254-cs-3l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=25&amp;end=30\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "え": {
-    "vocabulary": "笑顔",
-    "sentence": "彼女の明るい笑顔は、周りの人々に幸せをもたらします。",
+    "vocabulary": "映画",
+    "sentence": "映画を見るのは私の趣味です。",
+    "voctrans": "電影",
+    "sentrans": "看電影是我的嗜好。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9256-cs-3l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=34&amp;end=41\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "お": {
-    "vocabulary": "思い出",
-    "sentence": "旅行中に作った思い出は、私の宝物となっています。",
+    "vocabulary": "おもちゃ",
+    "sentence": "おもちゃを使って楽しい遊びをします。",
+    "voctrans": "玩具",
+    "sentrans": "使用玩具進行有趣的遊戲。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9258-hs-3l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=45&amp;end=53\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "か": {
-    "vocabulary": "可能性",
+    "vocabulary": "かのうせい",
     "sentence": "新しい挑戦をすることは、新たな可能性を開くことです。",
+    "voctrans": "可能性",
+    "sentrans": "接受新的挑戰開啟了新的可能性。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9259-cs-3l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=56&amp;end=64\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "き": {
-    "vocabulary": "喜び",
-    "sentence": "成功の瞬間は、喜びに満ちたものでした。",
+    "vocabulary": "綺麗",
+    "sentence": "彼女は美しい花を持っています。",
+    "voctrans": "美麗的",
+    "sentrans": "她手持一束美麗的花。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9261-hs-s",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=66&amp;end=75\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "く": {
-    "vocabulary": "空",
-    "sentence": "青い空と白い雲が広がっている。",
+    "vocabulary": "くるま",
+    "sentence": "車が新しくて速いです。",
+    "voctrans": "車",
+    "sentrans": "車子是新的且速度很快。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9263-cs-3l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=78&amp;end=83\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "け": {
     "vocabulary": "決断",
     "sentence": "重要な決断をする前に、よく考えることが大切です。",
+    "voctrans": "決定",
+    "sentrans": "在做出重要決定之前仔細思考非常重要。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9265-cs-3l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=86&amp;end=93\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "こ": {
-    "vocabulary": "心",
+    "vocabulary": "こころ",
     "sentence": "善良な心を持つことは、人生の豊かさをもたらします。",
+    "voctrans": "心",
+    "sentrans": "擁有一顆善良的心，就會讓生活變得豐富。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9267-cs-ss",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=96&amp;end=102\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "さ": {
     "vocabulary": "咲く",
     "sentence": "春になると、花が色とりどりに咲きます。",
+    "voctrans": "盛開",
+    "sentrans": "春天，各種顏色的花朵競相綻放。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9269-cs-ss",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=104&amp;end=112\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "し": {
-    "vocabulary": "始まり",
-    "sentence": "それは新しい冒険の始まりでした。",
+    "vocabulary": "したぎ",
+    "sentence": "このしたぎは新しいです。",
+    "voctrans": "內衣",
+    "sentrans": "這個內衣是新的。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9271-cs-m",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=115&amp;end=121\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "す": {
     "vocabulary": "過ぎる",
     "sentence": "時間が過ぎるのは本当に早いものだ。",
+    "voctrans": "經過",
+    "sentrans": "時間過得真快。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9273-cs-ss",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=123&amp;end=131\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "せ": {
-    "vocabulary": "成功",
+    "vocabulary": "せいこう",
     "sentence": "辛抱強く努力すれば、いつかは成功することができます。",
+    "voctrans": "成功",
+    "sentrans": "如果你有耐心並努力嘗試，總有一天你會成功。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9275-cs-3l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=133&amp;end=140\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "そ": {
     "vocabulary": "そば",
     "sentence": "寒い日には、温かいそばが美味しい。",
+    "voctrans": "蕎麥麵",
+    "sentrans": "在寒冷的日子裡，熱騰騰的蕎麥麵非常美味。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9277-cs-m",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=144&amp;end=151\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "た": {
     "vocabulary": "多様性",
     "sentence": "世界は多様性に富んでおり、異なる文化が共存しています。",
+    "voctrans": "多彩",
+    "sentrans": "世界豐富多彩，不同文化共存。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9279-hs-s",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=153&amp;end=160\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "ち": {
-    "vocabulary": "地球",
+    "vocabulary": "ちきゅう",
     "sentence": "私たちはみんな、地球の一部です。",
+    "voctrans": "地球",
+    "sentrans": "我們都是地球的一部分。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9281-cs-ss",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=163&amp;end=170\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "つ": {
     "vocabulary": "続ける",
     "sentence": "困難に直面しても、夢に向かって続けることが重要です。",
+    "voctrans": "繼續",
+    "sentrans": "即使面臨困難，繼續追求自己的夢想也很重要。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9284-cs-m",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=172&amp;end=177\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "て": {
     "vocabulary": "手",
     "sentence": "手を差し伸べることで、人々は助けを得ることができます。",
+    "voctrans": "手",
+    "sentrans": "透過伸出援手，人們可以獲得幫助。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9286-hs-s",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=180&amp;end=185\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "と": {
     "vocabulary": "遠い",
     "sentence": "あの山は遠くて高い。",
+    "voctrans": "遠",
+    "sentrans": "那座山又遠又高。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9288-cs-ll",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=188&amp;end=195\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "な": {
-    "vocabulary": "成長",
-    "sentence": "困難な状況から学び、成長することができます。",
+    "vocabulary": "なまえ",
+    "sentence": "彼は新しいなまえを選びました。",
+    "voctrans": "姓名",
+    "sentrans": " 他選擇了一個新名字。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9290-cs-l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=197&amp;end=206\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "に": {
-    "vocabulary": "日々",
-    "sentence": "日々の小さな喜びを大切にしましょう。",
+    "vocabulary": "にほん",
+    "sentence": "にほんは おおきなくにです。",
+    "voctrans": "日本",
+    "sentrans": " 日本是一個大國家。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9291-cs-m",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=209&amp;end=215\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "ぬ": {
-    "vocabulary": "抜群",
-    "sentence": "彼女の才能は抜群で、みんなを驚かせました。",
+    "vocabulary": "ぬいぐるみ",
+    "sentence": "私の部屋にはぬいぐるみがたくさんあります。",
+    "voctrans": "絨毛玩具",
+    "sentrans": " 我的房間裡有很多毛绒玩具。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9292-cs-l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=218&amp;end=227\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "ね": {
     "vocabulary": "寝る",
     "sentence": "良い睡眠は健康の秘訣です。",
+    "voctrans": "睡覺",
+    "sentrans": "良好的睡眠是身體健康的秘訣。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9293-cs-l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=218&amp;end=227\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "の": {
-    "vocabulary": "野菜",
-    "sentence": "色とりどりの野菜は栄養満点だ。",
+    "vocabulary": "飲み物",
+    "sentence": "飲み物を買いにコンビニに行きます。",
+    "voctrans": "喝的",
+    "sentrans": "我去便利店買飲料。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9294-hs-l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=241&amp;end=247\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "は": {
-    "vocabulary": "花",
+    "vocabulary": "はな",
     "sentence": "庭には美しい花が咲いています。",
+    "voctrans": "花",
+    "sentrans": "花園裡盛開著美麗的花朵。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9295-hs-3l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=250&amp;end=258\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "ひ": {
     "vocabulary": "ひとり",
     "sentence": "ひとりで過ごす時間も大切です。",
+    "voctrans": "獨自的",
+    "sentrans": "獨處的時間也很重要。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9298-cs-ll",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=260&amp;end=267\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "ふ": {
-    "vocabulary": "笛",
-    "sentence": "公園で風に吹かれながら笛を吹く人がいます。",
+    "vocabulary": "普通",
+    "sentence": "これは普通の本です。",
+    "voctrans": "通常",
+    "sentrans": "這是一本普通的書。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9301-cs-ll",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=270&amp;end=276\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "へ": {
     "vocabulary": "平和",
     "sentence": "世界中に平和が広がりますように。",
+    "voctrans": "和平",
+    "sentrans": "願和平遍佈世界。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9304-cs-l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=279&amp;end=284\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "ほ": {
-    "vocabulary": "歩く",
-    "sentence": "毎日の健康のために、歩く習慣をつけましょう。",
+    "vocabulary": "本当に",
+    "sentence": " 本当に嬉しいです。",
+    "voctrans": "真的是",
+    "sentrans": "真的很高興。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9307-cs-l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=286&amp;end=295\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "ま": {
-    "vocabulary": "未来",
-    "sentence": "未来の夢に向かって頑張ろう。",
+    "vocabulary": "またね",
+    "sentence": "またね、次の逢瀬を楽しみにしています。",
+    "voctrans": "再見",
+    "sentrans": "再見，期待著下一次相見。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9310-cs-ss",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=298&amp;end=306\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "み": {
-    "vocabulary": "未知",
-    "sentence": "未知の世界を探索するのはワクワクする。",
+    "vocabulary": "みかん",
+    "sentence": "彼はみかんを食べています。",
+    "voctrans": "橘子",
+    "sentrans": "他正在吃蜜柑。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9311-hs-s",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=309&amp;end=316\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "む": {
-    "vocabulary": "夢",
-    "sentence": "小さな夢から大きな夢まで、夢を追い続けましょう。",
+    "vocabulary": "むりょう",
+    "sentence": "無料でこのアプリをダウンロードできます。",
+    "voctrans": "免費的",
+    "sentrans": "你可以免費下載這個應用程式。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9312-cs-l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=320&amp;end=328\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "め": {
     "vocabulary": "目覚め",
     "sentence": "朝の新しい一日が目覚めの時です。",
+    "voctrans": "喚醒",
+    "sentrans": "早上是時候醒來迎接新的一天了。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9313-cs-m",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=331&amp;end=338\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "も": {
     "vocabulary": "もちろん",
     "sentence": "頑張った成果が出るのはもちろんだ。",
+    "voctrans": "當然",
+    "sentrans": "當然，你的努力將會得到回報。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9314-hs-s",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=341&amp;end=348\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "や": {
     "vocabulary": "やさしい",
     "sentence": "優しさは世界を温暖にする。",
+    "voctrans": "善良",
+    "sentrans": "善良溫暖世界。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9316-cs-s",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=350&amp;end=357\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "ゆ": {
-    "vocabulary": "優雅",
-    "sentence": "公園で優雅に散歩する老夫婦がいました。",
+    "vocabulary": "ゆっくり",
+    "sentence": "ゆっくり歩いて、景色を楽しんでください。",
+    "voctrans": "慢慢地",
+    "sentrans": "慢慢走，欣賞風景。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9318-cs-3l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=360&amp;end=367\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "よ": {
-    "vocabulary": "喜び",
-    "sentence": "小さなことにも喜びを見つけることが大切です。",
+    "vocabulary": "よる",
+    "sentence": "夜になると、星が輝いています。",
+    "voctrans": "晚上",
+    "sentrans": "夜晚來臨時，星星閃耀著。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9320-cs-s",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=370&amp;end=377\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "ら": {
-    "vocabulary": "楽しむ",
-    "sentence": "人生は楽しむためにある。",
+    "vocabulary": "楽天",
+    "sentence": "楽天な性格の人は、いつもポジティブな考え方を持っています。",
+    "voctrans": "樂天",
+    "sentrans": "樂天派的人總是擁有積極的思考方式。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9321-hs-s",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=380&amp;end=386\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "り": {
-    "vocabulary": "利用",
+    "vocabulary": "りよう",
     "sentence": "現代のテクノロジーを利用して、新しいことを学ぶ。",
+    "voctrans": "使用",
+    "sentrans": "利用現代科技並學習新事物。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9322-hs-l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=389&amp;end=395\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "る": {
     "vocabulary": "るすばん",
     "sentence": "友達が出かけるので、るすばんを頼まれた。",
+    "voctrans": "看家",
+    "sentrans": "我的朋友要出去，所以我被要求待在家裡。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9323-hs-s",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=397&amp;end=403\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "れ": {
     "vocabulary": "恋愛",
     "sentence": "若者たちは恋愛に夢中です。",
+    "voctrans": "戀愛關係",
+    "sentrans": "年輕人對愛情很瘋狂。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9324-cs-ll",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=406&amp;end=413\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "ろ": {
-    "vocabulary": "露",
-    "sentence": "朝露が花にきらきらと輝いている。",
+    "vocabulary": "ろうか",
+    "sentence": "ホテルのろうかを歩いていたとき、古い絵画がかかった壁に気づきました。",
+    "voctrans": "走廊",
+    "sentrans": " 在飯店走廊裡散步的時候，我注意到牆上懸掛著古老的畫作。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9325-cs-ss",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=416&amp;end=422\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "わ": {
-    "vocabulary": "和解",
-    "sentence": "争いごとは和解に導くことが大切です。",
+    "vocabulary": "わかい",
+    "sentence": "彼はまだ若いです。",
+    "voctrans": "年輕",
+    "sentrans": "他還很年輕。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9327-cs-3l",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=425&amp;end=432\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "を": {
-    "vocabulary": "をり",
-    "sentence": "日本の伝統的なをり紙は美しい模様が描かれています。",
+    "vocabulary": "助詞として",
+    "sentence": "彼はリンゴを食べます",
+    "voctrans": "作為助詞用",
+    "sentrans": "他吃蘋果。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9330-hs-ll",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=434&amp;end=441\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   },
   "ん": {
-    "vocabulary": "んまい",
-    "sentence": "おばあさんの手作り料理はいつもんまい美味しい。",
+    "vocabulary": "はつおん",
+    "sentence": "彼ははつおんを使って言葉を発音します。",
+    "voctrans": "撥音 鼻音 搭配單詞或語尾",
+    "sentrans": "他使用鼻音發音單詞。",
     "img": "https://item-shopping.c.yimg.jp/i/j/mojipara_9331-cs-ss",
     "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/wD3FJgij79c?start=445&amp;end=451\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
   }

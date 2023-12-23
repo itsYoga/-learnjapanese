@@ -19,6 +19,8 @@
         }
 
         body {
+            background-image: url('https://storage.pixteller.com/designs/designs-images/2019-03-27/05/simple-background-backgrounds-passion-simple-1-5c9b95bd34713.png');
+            background-size: 100%;
             margin: 0;
             padding: 0;
             height: 100vh;
@@ -114,14 +116,20 @@
             background-color: rgba(143, 157, 173, 0.2);
         }
 
-        .check_button,.button {
+        .check_button{color: white;
+            border: 1px solid #2e99c7;
+            background-color: #2e99c7;
+            box-shadow: 0px 3px 0px 0px #2792aa;
+        }
+        .button {
             color: white;
             border: 1px solid #2ec748;
             background-color: #2ec748;
             box-shadow: 0px 3px 0px 0px #27aa3d;
         }
 
-        .check_button:hover,.button:hover {
+        .check_button:hover{background-color: #33cadb;}
+        .button:hover {
             background-color: #33db4f;
         }
 
@@ -181,20 +189,7 @@ const wrapperElement = document.querySelector('.wrapper');
 });
 
         document.querySelector(".check_button").addEventListener("click", () => {
-            // Get the words in the destination container in the current order
-            const currentOrder = destinationArray.map((wordObject) => wordObject.word);
-
-            // Check if the current order matches the correct order
-            const isCorrect = JSON.stringify(currentOrder) === JSON.stringify(correctSentence);
-
-            // Display a message based on the result
-            if (isCorrect) {
-                alert("Correct order!");
-            } else {
-                alert("Incorrect order. Try again.");
-                // Optionally, you can reset the positions if the order is incorrect
-                resetWordPositions();
-            }
+            window.location.href = `voc menu.html`;
         });
 
        

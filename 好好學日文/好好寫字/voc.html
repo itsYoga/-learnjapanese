@@ -14,7 +14,10 @@
             --border-radius: 15px;
         }
         body{
+          background-image: url('https://img.freepik.com/free-photo/watercolor-light-steel-blue-wallpaper-image_53876-94665.jpg?size=626&ext=jpg&ga=GA1.1.1546980028.1703289600&semt=ais');
+          background-size: 100%;
           overflow: hidden;
+          font-family: "-apple-system", BlinkMacSystemFont, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "メイリオ", "Hiragino Kaku Gothic ProN", "MS PGothic", Osaka, "sans-serif";
         }
         body,input { font-size: 9pt; }
         .container{
@@ -58,6 +61,10 @@
         .top {
           display: inline-block; 
           vertical-align: top; 
+          margin-bottom: 0;
+        }
+        .top,#transtitle,#transtitle1{
+          font-size: 240%;
         }
         #back{
             position: absolute;
@@ -103,7 +110,6 @@
 
         .skip_button,
         .check_button{
-            
             font-size: 1em;
             font-weight: 600;
             padding: 0.8em 2.5em;
@@ -123,17 +129,16 @@
             margin-bottom: 1em;
         }
         .button {
-            position: absolute;
-            left: 19em;
-            width: 50px;
-            text-indent: 3px;
-            font-size: 1.8em;
-            font-weight: 600;
-            padding: 0.6em 1.3em;
+            width: 65px;
+            display: inline-block;
+            vertical-align: top;
+            font-size: 1.3em;
+            font-weight: 400;
+            padding: 0.6em 0.6em;
             border-radius: var(--border-radius);
             transition: 0s all ease-in-out;
             cursor: pointer;
-            margin-bottom: 1em;
+            
         }
 
         .skip_button ,.clearbutton{
@@ -194,13 +199,13 @@
                 
                 document.getElementById('backImage').src = imageUrl;
 
-                const imgVoc = document.getElementById('soundv');
+                const imgVoc = document.getElementById('transv');
                 const h1VocValue = document.createElement('h1');
                 h1VocValue.id = 'vocvalue';
                 imgVoc.parentNode.insertBefore(h1VocValue, imgVoc.nextSibling);
                 h1VocValue.innerHTML = vocabularyWord;
 
-                const imgSen = document.getElementById('sounds');
+                const imgSen = document.getElementById('transs');
                 const h1SenValue = document.createElement('h1');
                 h1SenValue.id = 'senvalue';
                 imgSen.parentNode.insertBefore(h1SenValue, imgSen.nextSibling);
@@ -232,7 +237,66 @@
         const prevKey = gojuonHiragana[prevIndex];
         window.location.href = "voc.html?key=" + prevKey;
     });
-
+    var transv = 0;
+    $("#transv").click(function () {
+      if(transv == 0){
+       $.ajax({
+        url: "vocabulary.json",  
+        dataType: "json",
+        success: function(data) {
+            var voctranslation = data[key].voctrans;
+            const imgSen = document.getElementById('vocvalue');
+                const h1SenValue = document.createElement('h1');
+                h1SenValue.id = 'transtitle';
+                imgSen.parentNode.insertBefore(h1SenValue, imgSen.nextSibling);
+                h1SenValue.innerHTML = "中文翻譯:";
+                const h1Value = document.createElement('h1');
+                h1Value.id = 'voctrans';
+                h1SenValue.parentNode.insertBefore(h1Value, h1SenValue.nextSibling);
+                h1Value.innerHTML = voctranslation;
+                transv=1;
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.error("Error fetching JSON: " + textStatus, errorThrown);
+        }
+    }); 
+      }else{
+        const imgSen = document.getElementById('transtitle').remove();
+        const imgSen1 = document.getElementById('voctrans').remove();
+        transv=0;
+      }
+      
+  });
+  var transs = 0;
+  $("#transs").click(function () {
+      if(transs == 0){
+       $.ajax({
+        url: "vocabulary.json",  
+        dataType: "json",
+        success: function(data) {
+            var voctranslation = data[key].sentrans;
+            const imgSen = document.getElementById('senvalue');
+                const h1SenValue = document.createElement('h1');
+                h1SenValue.id = 'transtitle1';
+                imgSen.parentNode.insertBefore(h1SenValue, imgSen.nextSibling);
+                h1SenValue.innerHTML = "中文翻譯:";
+                const h1Value = document.createElement('h1');
+                h1Value.id = 'sentrans';
+                h1SenValue.parentNode.insertBefore(h1Value, h1SenValue.nextSibling);
+                h1Value.innerHTML = voctranslation;
+                transs=1;
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.error("Error fetching JSON: " + textStatus, errorThrown);
+        }
+    }); 
+      }else{
+        const imgSen = document.getElementById('transtitle1').remove();
+        const imgSen1 = document.getElementById('sentrans').remove();
+        transs=0;
+      }
+      
+  });
 });
 
 
@@ -245,8 +309,8 @@
 <img src="" id="backImage" width="400" height="400" style=" border: 10px solid #2792aa; border-radius: var(--border-radius);">
 </div>
 <div class="sentence">
-  <h1 id="voc" class="top">単語:</h1><img src='https://cdn4.iconfinder.com/data/icons/web-ui-color/128/Audio-512.png' id='soundv'> 
-  <h1 id="sen" class="top">例文:</h1><img src='https://cdn4.iconfinder.com/data/icons/web-ui-color/128/Audio-512.png' id='sounds'> 
+  <h1 id="voc" class="top">単語:</h1><img src='https://cdn4.iconfinder.com/data/icons/web-ui-color/128/Audio-512.png' id='soundv'> <div class="button" id="transv">中文翻譯</div>
+  <h1 id="sen" class="top">例文:</h1><img src='https://cdn4.iconfinder.com/data/icons/web-ui-color/128/Audio-512.png' id='sounds'> <div class="button" id="transs">中文翻譯</div>
 </div>
 </div>
 <div class="voiceoption">
