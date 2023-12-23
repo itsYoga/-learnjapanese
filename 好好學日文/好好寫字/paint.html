@@ -16,6 +16,7 @@
         
         body,input { font-size: 9pt; }
         .container{
+            margin-left: 10em;
             display: flex;
             flex-wrap: nowrap;
         }
@@ -31,8 +32,36 @@
         #cSketchPad { cursor: arrow; }
         .video{
             position: absolute;
+            
             top: 12em;
-            left: 45%;
+            left: 50%;
+        } .dOutput{
+            position: absolute;
+            
+            top: 1em;
+            left: 50%;
+        }
+        #back{
+            position: absolute;
+            left: 0;
+            top:50%;
+            width: 80px;
+            height: 80px;
+            transform: scaleX(-1);
+        }
+        #next{
+            position: absolute;
+            right: 0;
+            top:50%;
+            width: 80px;
+            height: 80px;
+        }
+        #next:active{
+            transform: translateY(2px);
+        }
+        #back:active{
+            transform: translateY(2px) scaleX(-1);
+            
         }
         footer {
             position: fixed;
@@ -68,7 +97,7 @@
         }
         .button {
             position: absolute;
-            left: 19em;
+            left: 25em;
             width: 50px;
             text-indent: 3px;
             font-size: 1.8em;
@@ -77,6 +106,19 @@
             border-radius: var(--border-radius);
             transition: 0s all ease-in-out;
             cursor: pointer;
+            margin-bottom: 1em;
+        }
+        .dl_button{
+            position: absolute;
+            right: 0;
+            width: 90px;
+            font-size: 1.8em;
+            font-weight: 600;
+            padding: 0.6em 1em;
+            border-radius: var(--border-radius);
+            transition: 0s all ease-in-out;
+            cursor: pointer;
+            margin-left: -5em;
             margin-bottom: 1em;
         }
 
@@ -91,27 +133,40 @@
             background-color: rgba(143, 157, 173, 0.2);
         }
 
-        .check_button,.button {
+        .check_button,.button,.dl_button {
             color: white;
             border: 1px solid #2ec748;
             background-color: #2ec748;
             box-shadow: 0px 3px 0px 0px #27aa3d;
         }
 
-        .check_button:hover,.button:hover {
+        .check_button:hover,.button:hover,.dl_button:hover {
             background-color: #33db4f;
         }
 
         .skip_button:active,
         .check_button:active,
-        .button:active ,.clearbutton:active{
+        .button:active ,.clearbutton:active,.dl_button:active{
             transform: translateY(2px);
             box-shadow: none;
         }
     </style>
     <script>
+        const gojuonHiragana = [
+        "あ", "い", "う", "え", "お",
+        "か", "き", "く", "け", "こ",
+        "さ", "し", "す", "せ", "そ",
+        "た", "ち", "つ", "て", "と",
+        "な", "に", "ぬ", "ね", "の",
+        "は", "ひ", "ふ", "へ", "ほ",
+        "ま", "み", "む", "め", "も",
+        "や", "ゆ", "よ", 
+        "ら", "り", "る", "れ", "ろ",
+        "わ", "を", "ん"
+        ];
         const urlParams = new URLSearchParams(window.location.search);
         const key = urlParams.get('key'); 
+        let originalVideoContent;
         if (key) {
     
     // 获取JSON数据
@@ -129,11 +184,13 @@
                 videoContainer.innerHTML = '<h1>筆畫影片</h1>';
                 videoContainer.innerHTML+=videoFrame;
             }
+            originalVideoContent = $("#video").html();
         })
         .catch(error => console.error('Error fetching JSON:', error));
     } else {
     console.error('Key parameter is missing.');
-    }
+    }   
+    
         $(function () {
             //產生不同顏色的div方格當作調色盤選項
             var colors =
@@ -192,11 +249,29 @@
             .mouseup(function (e) {
                 drawMode = false;
             });
+            
             //利用.toDataqURL()將繪圖結果轉成圖檔
             $("#bGenImage").click(function () {
+                
+                $("#video").empty();
                 $("#dOutput").html("<h1>你寫的字</h1>").append(
                 $("<img />", { src: $canvas[0].toDataURL(),
                     "class": "output"
+                }
+                ));
+                $("#dOutput").append(
+                $("<div />", {
+                    class: "dl_button",
+                    text: "Download",
+                    click: function () {
+                    const imageDataUrl = $(".output").attr("src");
+                    const downloadLink = document.createElement("a");
+                    downloadLink.href = imageDataUrl;
+                    downloadLink.download = "your_"+key+".png";
+                    document.body.appendChild(downloadLink);
+                    downloadLink.click();
+                    document.body.removeChild(downloadLink);
+                }
                 }));
             });
            
@@ -204,7 +279,8 @@
     $("#clear").click(function () {
         // 删除原有的canvas元素
         $canvas.remove();
-
+        $("#dOutput").empty();
+        $("#video").html(originalVideoContent);
         // 创建新的canvas元素并添加到DOM
         var newCanvas = $('<canvas id="cSketchPad" width="500" height="500" style="border: 2px solid gray; " />');
         $("#dCanvas").append(newCanvas);
@@ -237,7 +313,22 @@
     $(".skip_button").click(function () {
     window.location.href = "write menu.html"; 
     });
-
+    $(".check_button").click(function () {
+    window.location.href = "voc.html?key="+key; 
+    });
+    $("#next").click(function () {
+    const keyIndex = gojuonHiragana.indexOf(key);
+    const nextIndex = (keyIndex + 1) % gojuonHiragana.length;
+    const nextKey = gojuonHiragana[nextIndex];
+    window.location.href = "paint.html?key=" + nextKey;
+    });
+    $("#back").click(function () {
+        const keyIndex = gojuonHiragana.indexOf(key);
+        const prevIndex = (keyIndex - 1 + gojuonHiragana.length) % gojuonHiragana.length;
+        const prevKey = gojuonHiragana[prevIndex];
+        window.location.href = "paint.html?key=" + prevKey;
+    });
+    
 });
 
 </script>
@@ -257,9 +348,10 @@
 <div class="video" id="video">  
 <div><h1>筆畫影片</h1><iframe width="560" height="315" src="https://www.youtube.com/embed/wD3FJgij79c?start=0&amp;end=12" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 </div>
-
+<div class="dOutput" id="dOutput"></div>
 </div>
-<div id="dOutput"></div>
+<img id="next" src="https://cdn-icons-png.flaticon.com/512/189/189253.png">
+<img id="back" src="https://cdn-icons-png.flaticon.com/512/189/189253.png">
 <footer>
     <div class="skip_button">MENU</div>
     <div class="check_button">單字</div>
