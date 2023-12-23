@@ -100,13 +100,40 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden ;
-    
+            /*overflow: hidden ;*/
+            transform: scale(0);
+            transition: height .2s ease;
+        }
+
+        .wrapper .active{
+            height: 520px;
         }
         .wrapper .form-box{
             width:  100%;
             padding: 40px;
         }
+
+        .wrapper .form-box.login{
+            transition: transform .18s ease;
+            transform: translateX(0);
+        }
+
+        .wrapper .active .form-box.login{
+            transition: none;
+            transform: translateX(-400px);
+        }
+
+        .wrapper .form-box .register{
+            position: absolute;
+            transition: none;
+            transform: translateX(400px);
+        }
+
+        .wrapper .active .form-box.register{
+            transition: transform .18s ease;
+            transform: translateX(0);
+        }
+
         .wrapper .icon-close{
             position: absolute;
             top:0;
@@ -258,7 +285,51 @@
                 </div>
             </form>
         </div>
+
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="#">
+                <div class="input-box">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">
+                        I agree to the terms & conditions
+                    </label>
+                    
+                </div>
+                <button type="submit" class="btn">註冊</button>
+                <div class="login-register">
+                    <p>Already have an account?<a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
     </div>
+    <script>
+        const wrapper = document.querySelector('.wrapper');
+        const loginLink=document.querySelector('.login-link');
+        const registerLink=document.querySelector('register-link');
+
+        registerLink.addEventListener('click', ()=>{
+            wrapper.classList.add('active');
+        })
+
+        loginLink.addEventListener('click', ()=>{
+            wrapper.classList.remove('active');
+        })
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
