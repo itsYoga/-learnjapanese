@@ -5,6 +5,7 @@ const collection = require("./config");
 
 const app = express();
 
+
 // Convert data to JSON format
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
