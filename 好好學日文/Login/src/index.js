@@ -16,11 +16,13 @@ app.set('view engine', 'ejs');
 // Serve static files from the "public" directory
 app.use(express.static("public"));
 
-// Serve static files from the "Rewrite" directory
-app.use(express.static("Rewrite"));
+//Sentence route
+app.get('/-learnjapanese/好好學日文/Login/Rewrite/sentence.html', function(req, res) {
+    res.sendFile(path.join(__dirname, 'Rewrite', 'sentence.html'));
+});
 
 
-//
+//Login button on the right up corner route
 app.get('/login', function(req, res) {
     res.render('login'); // Assuming your view is named 'login'
 });
