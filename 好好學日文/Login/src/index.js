@@ -11,6 +11,7 @@ app.use(express.urlencoded({ extended: false }));
 app.set('view engine', 'ejs');
 //static file
 app.use(express.static("public"));
+app.use(express.static("Rewrite"));
 
 app.get("/", (req, res) => {
     res.render("login");
