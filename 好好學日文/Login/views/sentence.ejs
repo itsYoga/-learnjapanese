@@ -238,88 +238,23 @@
                     list: ["は", "そ", "、", "で", "ね", "い", "う", "す"],
                 },
                 {
-                    chinese: "我正在學習新的語言",
-                    japanese: "新しい言語を学んでいます",
-                    list: ["新しい", "を", "言語", "います", "学んで"],
+                    chinese: "我喜歡吃寿司",
+                    japanese: "私は寿司が好きです",
+                    list: ["は", "で", "私", "す", "寿", "司", "が", "好", "き"],
                 },
                 {
-                    chinese: "這個城市很繁華",
-                    japanese: "この街はとても賑やかです",
-                    list: ["とても", "は", "街", "です", "賑やか"],
+                    chinese: "今天天氣很好",
+                    japanese: "今日は天気が良いです",
+                    list: ["気", "今", "い", "は", "天", "が", "日", "で", "良", "す"],
                 },
                 {
-                    chinese: "我最喜歡的食物是壽司",
-                    japanese: "私の好きな食べ物は寿司です",
-                    list: ["好きな", "寿司", "です", "私の", "食べ物"],
+                    chinese: "他們是我的朋友",
+                    japanese: "彼らは私の友達です",
+                    list: ["友", "彼", "で", "私", "の", "ら", "達", "は", "す"],
                 },
-                {
-                    chinese: "我每天都運動",
-                    japanese: "私は毎日運動します",
-                    list: ["毎日", "します", "私は", "運動"],
-                },
-                {
-                    chinese: "這是我的手機",
-                    japanese: "これは私の携帯電話です",
-                    list: ["これは", "携帯電話", "です", "私の"],
-                },
-                {
-                    chinese: "我昨天看了一部電影",
-                    japanese: "昨日、私は映画を見ました",
-                    list: ["えました", "きました", "じつ", "た", "私は", "映画", "見", "る"],
-                },
-                {
-                    chinese: "他們一起去旅行了",
-                    japanese: "彼らは一緒に旅行しました",
-                    list: ["一緒に", "しました", "旅行", "は", "彼ら"],
-                },
-                {
-                    chinese: "這個問題很難",
-                    japanese: "この問題は難しいです",
-                    list: ["これ", "です", "は", "問題", "難しい"],
-                },
-                {
-                    chinese: "我們明天要去海邊玩",
-                    japanese: "私たちは明日海辺に行く予定です",
-                    list: ["た", "い", "たい", "に", "たす", "ます", "ます", "行く", "海辺", "私たちは", "予定"],
-                },
-                {
-                    chinese: "這是我妹妹的書包",
-                    japanese: "これは私の妹のかばんです",
-                    list: ["これは", "かばん", "です", "の", "私の", "妹"],
-                },
-                {
-                    chinese: "他們在公園裡散步",
-                    japanese: "彼らは公園で散歩しています",
-                    list: ["ています", "は", "公園で", "彼ら", "散歩"],
-                },
-                {
-                    chinese: "我喜歡冬天的雪",
-                    japanese: "私は冬の雪が好きです",
-                    list: ["です", "が", "の", "私は", "好き", "雪"],
-                },
-                {
-                    chinese: "這間餐廳的食物很美味",
-                    japanese: "このレストランの料理はとても美味しいです",
-                    list: ["この", "た", "ても", "は", "の", "め", "います", "料理", "美味しい", "食物"],
-                },
-                {
-                    chinese: "我們一起慶祝生日吧",
-                    japanese: "一緒に誕生日を祝いましょう",
-                    list: ["い", "おう", "に", "生日", "一緒に", "ましょう", "祝い", "誕"],
-                },
-                {
-                    chinese: "這個電影非常有趣",
-                    japanese: "この映画はとても面白いです",
-                    list: ["いです", "か", "が", "この", "た", "ても", "映画", "面白い", "ます"],
-                },
-                {
-                    chinese: "我每天都喝咖啡",
-                    japanese: "私は毎日にコーヒーを飲みます",
-                    list: ["ます", "コーヒー", "を", "私", "飲み","毎日","は","に"],
-                },
-                
                 // Add more exercises as needed
             ];
+
 
             // Get references to HTML elements
             const destinationContainer = document.getElementById("destination__container");
@@ -434,59 +369,10 @@
             });
 
             // Skip button click event
-            // Skip button click event
+
             skipButton.addEventListener("click", () => {
-                // Select a new random exercise
-                exercise = exercises[Math.floor(Math.random() * exercises.length)];
-                chineseSentence = exercise.chinese.split(" ");
-                listOfWords = exercise.list;
-
-                // Clear the original text and origin container
-                originalText.innerHTML = "";
-                originContainer.innerHTML = "";
-
-                // Display the new Chinese sentence and list of words
-                for (let i = 0; i < chineseSentence.length; i++) {
-                    const spanNode = document.createElement("span");
-                    spanNode.textContent = chineseSentence[i];
-                    originalText.appendChild(spanNode);
-                }
-
-                for (let i = 0; i < listOfWords.length; i++) {
-                    const wordNode = document.createElement("div");
-                    wordNode.textContent = listOfWords[i];
-                    wordNode.classList.add("word");
-                    originContainer.appendChild(wordNode);
-
-                    // Add click event listener to each new word
-                    wordNode.addEventListener("click", () => {
-                        // Use calibrateDestinationCursorPos(destinationArray) instead of destinationStartPos
-                        let yTravel =
-                            originArray[i].y -
-                            (destinationPosDefault.y +
-                                (destinationPosDefault.height - originArray[i].height) / 2);
-                        let xTravel = (originArray[i].x > calibrateDestinationCursorPos(destinationArray)) ?
-                            -(originArray[i].x - calibrateDestinationCursorPos(destinationArray)) :
-                            calibrateDestinationCursorPos(destinationArray) - originArray[i].x;
-
-                        // Move the word to the destination container or back to the origin
-                        if (originArray[i].location === "origin") {
-                            originArray[i].location = "destination";
-                            destinationArray.push(originArray[i]);
-                        } else if (originArray[i].location === "destination") {
-                            yTravel = 0;
-                            xTravel = 0;
-                            originArray[i].location = "origin";
-                            let test = destinationArray.filter(
-                                (wordObject) => wordObject.word !== originArray[i].word
-                            );
-                            destinationArray = test;
-                        }
-
-                        // Apply the transformation to the clicked word
-                        wordNode.style.transform = `translate(${xTravel}px,-${yTravel}px)`;
-                    });
-                }
+                // Reload the page to restart
+                window.location.reload();
             });
         });
 
