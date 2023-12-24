@@ -1,28 +1,34 @@
 const express = require('express');
-const pasth = require("path");
+const path = require("path");
 const bcrypt = require("bcrypt");
 const collection = require("./config");
 
 const app = express();
-//covert data to json format
+
+// Convert data to JSON format
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Set view engine to EJS
 app.set('view engine', 'ejs');
-//static file
+
+// Serve static files from the "public" directory
 app.use(express.static("public"));
+
+// Serve static files from the "Rewrite" directory
 app.use(express.static("Rewrite"));
 
+// Home page route
 app.get("/", (req, res) => {
     res.render("login");
 });
 
+// Signup page route
 app.get("/signup", (req, res) => {
     res.render("signup");
 });
 
-//Register User
-// Signup user
+// Register User
 app.post("/signup", async (req, res) => {
     const data = {
         name: req.body.username,
@@ -39,7 +45,7 @@ app.post("/signup", async (req, res) => {
     }
 });
 
-// Login user
+// Login User
 app.post("/login", async (req, res) => {
     try {
         const check = await collection.findOne({ name: req.body.username });
@@ -59,8 +65,7 @@ app.post("/login", async (req, res) => {
     }
 });
 
-
 const port = 3000;
 app.listen(port, () => {
     console.log(`Server running on Port: ${port}`);
-})
+});
