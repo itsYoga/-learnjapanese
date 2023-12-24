@@ -19,10 +19,17 @@ app.use(express.static("public"));
 // Serve static files from the "Rewrite" directory
 app.use(express.static("Rewrite"));
 
+
+//
+app.get('/login', function(req, res) {
+    res.render('login'); // Assuming your view is named 'login'
+});
+
 // Home page route
 app.get("/", (req, res) => {
     res.render("login");
 });
+
 
 // Signup page route
 app.get("/signup", (req, res) => {
