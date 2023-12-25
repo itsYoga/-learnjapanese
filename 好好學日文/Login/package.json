@@ -8,7 +8,7 @@
     "mongoose": "^8.0.3"
   },
   "scripts": {
-    "start": "nodemon your-app.js",
+    "start": "nodemon src/index.js",
     "build": "npm run build",
     "predeploy":"npm run build",
     "deploy":"gh-pages -d build"
