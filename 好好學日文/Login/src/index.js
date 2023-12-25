@@ -25,10 +25,24 @@ app.get('/sentence', function(req, res) {
     res.render('sentence');
 });
 
-app.get('/voc_menu', function(req, res) {
-    res.render('writing/voc_menu'); 
+app.get('/home', function(req, res) {
+    res.render('home');
 });
 
+app.get('/vocmenu', function(req, res) {
+    res.render('voc menu');
+});
+
+app.get('/voc.ejs', function(req, res) {
+    res.render('voc');
+});
+
+app.get('/paint.ejs', function(req, res) {
+    res.render('paint');
+});
+app.get('/writemenu', function(req, res) {
+    res.render('write menu');
+});
 //Login button on the right up corner route
 app.get('/login', function(req, res) {
     res.render('login'); // Assuming your view is named 'login'

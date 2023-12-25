@@ -173,7 +173,7 @@ const wrapperElement = document.querySelector('.wrapper');
   checkButtonElement.className = 'button';
   checkButtonElement.textContent = character;
   checkButtonElement.addEventListener('click', () => {
-            window.location.href = `paint.html?key=${character}`;
+            window.location.href = `paint.ejs?key=${character}`;
         });
   wrapperElement.appendChild(checkButtonElement);
     }
@@ -189,9 +189,11 @@ const wrapperElement = document.querySelector('.wrapper');
 });
 
         document.querySelector(".check_button").addEventListener("click", () => {
-            window.location.href = `voc menu.html`;
+            window.location.href = `vocmenu`;
         });
-
+        document.querySelector(".skip_button").addEventListener("click", () => {
+            window.location.href = `home`;
+        });
        
     </script>
 </body>
