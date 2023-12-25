@@ -25,8 +25,8 @@ app.get('/sentence', function(req, res) {
     res.render('sentence');
 });
 
-app.get('/Login/public/好好寫字/voc menu.html', function(req, res) {
-    res.render('voc menu'); 
+app.get('/voc_menu', function(req, res) {
+    res.render('writing/voc_menu'); 
 });
 
 //Login button on the right up corner route
