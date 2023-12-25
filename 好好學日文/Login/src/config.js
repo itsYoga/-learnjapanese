@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const connnect = mongoose.connect("mongodb://localhost:27017/Login-tut");
+const connnect = mongoose.connect("mongodb+srv://01157145:01157145@test.5ns6qr5.mongodb.net/?retryWrites=true&w=majority");
 
 
 connnect.then(()=>{
