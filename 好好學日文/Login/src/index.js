@@ -22,11 +22,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Login button on the right up corner route
 app.get('/sentence', function(req, res) {
-    res.render('sentence'); // Assuming your view is named 'login'
+    res.render('sentence');
 });
 
-
-
+app.get('/Login/public/好好寫字/voc menu.html', function(req, res) {
+    res.render('voc menu'); 
+});
 
 //Login button on the right up corner route
 app.get('/login', function(req, res) {
