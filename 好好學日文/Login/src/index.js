@@ -26,6 +26,8 @@ app.get('/sentence', function(req, res) {
 });
 
 
+
+
 //Login button on the right up corner route
 app.get('/login', function(req, res) {
     res.render('login'); // Assuming your view is named 'login'
@@ -54,7 +56,7 @@ app.post("/signup", async (req, res) => {
     if (existingUser) {
         res.send("User already exists. Please choose a different username.");
     } else {
-        const userdata = await collection.insertOne(data);
+        const userdata = await collection.insertMany(data);
         console.log("User registered with ID:", userdata.insertedId);
     }
 });
