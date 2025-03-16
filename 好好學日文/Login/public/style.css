@@ -12,7 +12,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(Japan.jpeg) no-repeat;
+    background: url(https://static.vecteezy.com/system/resources/previews/023/856/960/large_2x/summer-seasonal-anime-style-background-landscape-mountain-lake-and-relax-vibes-anime-background-or-wallpaper-generative-ai-free-photo.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 
@@ -30,7 +30,7 @@ header{
 }
 
 .logo{
-    font-size: 5em;
+    font-size: 3em;
     color:white;
     user-select: none;
     text-shadow: 4px 4px 4px black;
@@ -171,4 +171,77 @@ p {
 }
 a {
     color: #2ec748;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background: url(https://static.vecteezy.com/system/resources/previews/023/856/960/large_2x/summer-seasonal-anime-style-background-landscape-mountain-lake-and-relax-vibes-anime-background-or-wallpaper-generative-ai-free-photo.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 1.5em;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .navigation a {
+        margin: 10px 0;
+        font-size: 1em; /* Adjusted font size for smaller screens */
+    }
+
+    .form-container {
+        width: 80%;
+        margin: 20px auto;
+        padding: 10px; /* Added padding for better spacing */
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+        position: relative;
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #fff;
+        text-shadow: 3px 3px 3px black;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    .form-group .icon1,
+    .form-group .icon2 {
+        position: absolute;
+        right: 10px;
+        font-size: 1.2em;
+        color: #162938;
+        line-height: normal; /* Adjusted line-height for better positioning */
+        top: 50%; /* Centered vertically */
+        transform: translateY(-50%);
+    }
+
+    .form-group input {
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+    }
 }

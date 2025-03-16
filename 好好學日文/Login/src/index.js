@@ -1,3 +1,4 @@
+
 const express = require('express');
 const path = require("path");
 const bcrypt = require("bcrypt");
@@ -23,6 +24,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Login button on the right up corner route
 app.get('/sentence', function(req, res) {
     res.render('sentence');
+});
+app.get("/src/jquery3.6.1.js", (req, res) => {
+    // Use path.join to construct the full path to the file
+    const filePath = path.join(__dirname, 'jquery3.6.1.js');
+    
+    // Use express's res.sendFile to send the file
+    res.sendFile(filePath);
 });
 
 app.get('/home', function(req, res) {
@@ -73,6 +81,7 @@ app.post("/signup", async (req, res) => {
     } else {
         const userdata = await collection.insertMany(data);
         console.log("User registered with ID:", userdata.insertedId);
+        res.redirect("/login");
     }
 });
 
