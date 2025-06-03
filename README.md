@@ -1,73 +1,105 @@
-# Project Name: learnjapanese
+# 好好學日文 / Learn Japanese Well
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
+[English](#english) | [繁體中文](#繁體中文)
 
-## Introduction
-Welcome to the learnjapanese project! This project is designed to help users learn the Japanese language through an interactive and engaging web application. Whether you are a beginner looking to learn the basics or an advanced learner aiming to polish your skills, learnjapanese offers a variety of resources to support your learning journey.
+<a name="english"></a>
+## English
 
-The learnjapanese application includes comprehensive lessons on vocabulary, grammar, and kanji, along with quizzes and practice exercises to reinforce what you have learned. Additionally, the platform provides cultural insights and real-life examples to help you understand and appreciate Japanese culture.
+### Project Overview
+好好學日文 (Learn Japanese Well) is an interactive web application designed to help users learn Japanese through various engaging features. The application combines modern web technologies with effective language learning methodologies to create an immersive learning experience.
 
-The project is built using EJS, CSS, and JavaScript, ensuring a smooth and user-friendly experience. Our goal is to make learning Japanese accessible and enjoyable for everyone.
+### Features
+- **Writing Practice**: Interactive kanji and kana writing exercises
+- **Sentence Reconstruction**: Practice Japanese sentence structure through word ordering exercises
+- **Vocabulary Learning**: Comprehensive vocabulary lists with practice exercises
+- **User Authentication**: Secure login and registration system
+- **Responsive Design**: Optimized for both desktop and mobile devices
+- **Beautiful UI**: Modern and clean interface with anime-inspired design
 
-## Features
-The learnjapanese project includes a wide range of features designed to enhance your learning experience:
+### Technical Stack
+- Frontend: HTML5, CSS3, JavaScript
+- Backend: Node.js, Express.js
+- Database: MongoDB
+- Template Engine: EJS
+- Authentication: bcrypt
 
-- **Interactive Lessons**: Learn Japanese through structured lessons that cover various topics, including vocabulary, grammar, and kanji. Each lesson includes detailed explanations and examples to help you understand the material.
-
-- **Vocabulary Practice**: Build your Japanese vocabulary with our extensive practice exercises. These exercises are designed to test your knowledge and help you retain new words and phrases.
-
-- **Grammar Lessons**: Understand the intricacies of Japanese grammar with our comprehensive lessons. Each lesson breaks down complex grammar rules into easy-to-understand concepts.
-
-- **Kanji Practice**: Master the Japanese writing system by practicing kanji characters. Our kanji practice exercises help you learn the meaning, pronunciation, and stroke order of each character.
-
-- **Quizzes and Tests**: Test your knowledge with quizzes and tests that cover various aspects of the Japanese language. These assessments help you identify areas for improvement and track your progress.
-
-- **Cultural Insights**: Gain a deeper understanding of Japanese culture through our cultural insights section. Learn about Japanese customs, traditions, and everyday life to enhance your language learning experience.
-
-- **User Profiles**: Create a user profile to track your progress and save your learning data. This feature allows you to pick up where you left off and monitor your improvement over time.
-
-- **Responsive Design**: Access the learnjapanese application on any device with our responsive design. Whether you are using a desktop, tablet, or smartphone, you can enjoy a seamless learning experience.
-
-- **Community Support**: Join our community of Japanese learners to share tips, ask questions, and support each other. Our community forums provide a space for learners to connect and collaborate.
-
-## Installation
-Explain how to install the project. Include any prerequisites that need to be installed, such as Node.js or specific libraries. Provide step-by-step instructions.
-
+### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/itsYoga/-learnjapanese.git
+git clone https://github.com/yourusername/learnjapanese.git
 
-# Navigate to the project directory
-cd -learnjapanese
+# Navigate to project directory
+cd learnjapanese
 
 # Install dependencies
 npm install
-```
 
-## Usage
-Provide instructions on how to use the project. Include examples and possibly screenshots or gifs to illustrate usage.
+# Create .env file and add your MongoDB URI
+echo "MONGODB_URI=your_mongodb_uri" > .env
 
-```bash
-# Start the development server
+# Start the application
 npm start
 ```
-Open your web browser and navigate to `http://localhost:3000` to start using the application.
 
-## Contributing
-Explain how others can contribute to your project. This might include guidelines for submitting issues and pull requests, coding standards, and more.
+### Usage
+1. Register a new account or login with existing credentials
+2. Access the main menu with three learning options:
+   - Writing Practice (好好寫字)
+   - Sentence Reconstruction (句字重組)
+   - Vocabulary Learning (單字)
+3. Choose your preferred learning activity and start practicing
 
-### Submitting Issues
-If you find a bug or have a feature request, please submit an issue [here](https://github.com/itsYoga/-learnjapanese/issues).
+### Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-### Pull Requests
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature-branch`.
-3. Make your changes and commit them: `git commit -m 'Add some feature'`.
-4. Push to the branch: `git push origin feature-branch`.
-5. Submit a pull request.
+---
 
+<a name="繁體中文"></a>
+## 繁體中文
+
+### 專案概述
+好好學日文是一個互動式網頁應用程式，旨在通過各種有趣的功能幫助用戶學習日語。該應用程式結合了現代網頁技術和有效的語言學習方法，創造出沉浸式的學習體驗。
+
+### 功能特點
+- **寫字練習**：互動式漢字和假名書寫練習
+- **句子重組**：通過單字排序練習來學習日語句子結構
+- **單字學習**：全面的單字列表和練習題
+- **用戶認證**：安全的登入和註冊系統
+- **響應式設計**：優化支援桌面和移動設備
+- **精美界面**：現代簡潔的動漫風格設計
+
+### 技術架構
+- 前端：HTML5、CSS3、JavaScript
+- 後端：Node.js、Express.js
+- 數據庫：MongoDB
+- 模板引擎：EJS
+- 認證系統：bcrypt
+
+### 安裝步驟
+```bash
+# 複製專案
+git clone https://github.com/yourusername/learnjapanese.git
+
+# 進入專案目錄
+cd learnjapanese
+
+# 安裝依賴套件
+npm install
+
+# 創建 .env 文件並添加 MongoDB URI
+echo "MONGODB_URI=your_mongodb_uri" > .env
+
+# 啟動應用程式
+npm start
+```
+
+### 使用說明
+1. 註冊新帳號或使用現有帳號登入
+2. 進入主選單，選擇三個學習選項之一：
+   - 寫字練習（好好寫字）
+   - 句子重組（句字重組）
+   - 單字學習（單字）
+3. 選擇您喜歡的學習活動並開始練習
+
+### 參與貢獻
+歡迎貢獻！請隨時提交 Pull Request。
